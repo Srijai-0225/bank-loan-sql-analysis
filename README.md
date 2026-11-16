@@ -4,7 +4,7 @@
 
 > **Summary:** Two simple pre-loan rules (a negative balance history, or a monthly payment of 20%+ of the average balance) flag just **10% of loans** but capture **50% of all defaults**. Every account that went negative before its loan defaulted (27 of 27).
 
-**[▶ View the interactive Tableau dashboard](TABLEAU_LINK)**
+**[▶ View the interactive Tableau dashboard](https://public.tableau.com/app/profile/srijai.nimmagadda/viz/Book1_17948035155510/BankLoanRiskDashboard)**
 
 ![Dashboard](images/dashboard.png)
 
