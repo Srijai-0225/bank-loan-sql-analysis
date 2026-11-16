@@ -1,0 +1,3020 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Book1_17948035155510' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='tableau_monthly' inline='true' name='federated.06rck8n06ae7sd166b9cx1bqutud' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tableau_monthly' name='textscan.1r4mdsn0ji3wld156lg3t0gvajw3'>
+            <connection class='textscan' directory='C:/Users/nimma/OneDrive/Desktop/bank-loan-sql-analysis/data/processed' filename='tableau_monthly.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1r4mdsn0ji3wld156lg3t0gvajw3' name='tableau_monthly.csv' table='[tableau_monthly#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='date' name='month' ordinal='0' />
+            <column datatype='integer' name='transactions' ordinal='1' />
+            <column datatype='integer' name='credits' ordinal='2' />
+            <column datatype='integer' name='withdrawals' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[tableau_monthly.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[tableau_monthly.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_monthly.csv_C5AD97D60CBB4FFD9D08D5CE93B8D699]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transactions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[transactions]</local-name>
+            <parent-name>[tableau_monthly.csv]</parent-name>
+            <remote-alias>transactions</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_monthly.csv_C5AD97D60CBB4FFD9D08D5CE93B8D699]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>credits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[credits]</local-name>
+            <parent-name>[tableau_monthly.csv]</parent-name>
+            <remote-alias>credits</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_monthly.csv_C5AD97D60CBB4FFD9D08D5CE93B8D699]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>withdrawals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[withdrawals]</local-name>
+            <parent-name>[tableau_monthly.csv]</parent-name>
+            <remote-alias>withdrawals</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_monthly.csv_C5AD97D60CBB4FFD9D08D5CE93B8D699]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='tableau_monthly.csv' datatype='table' name='[__tableau_internal_object_id__].[tableau_monthly.csv_C5AD97D60CBB4FFD9D08D5CE93B8D699]' role='measure' type='quantitative' />
+      <column caption='Credits' datatype='integer' name='[credits]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+      <column caption='Transactions' datatype='integer' name='[transactions]' role='measure' type='quantitative' />
+      <column caption='Withdrawals' datatype='integer' name='[withdrawals]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/nimma/AppData/Local/Temp/TableauTemp/#TableauTemp_1xlyk0a0wrrtji17xg8yi08v29jw.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/15/2026 06:19:40 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>0</ordinal>
+              <family>tableau_monthly.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>transactions</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[transactions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>transactions</remote-alias>
+              <ordinal>1</ordinal>
+              <family>tableau_monthly.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>credits</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[credits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>credits</remote-alias>
+              <ordinal>2</ordinal>
+              <family>tableau_monthly.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>withdrawals</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[withdrawals]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>withdrawals</remote-alias>
+              <ordinal>3</ordinal>
+              <family>tableau_monthly.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='tableau_monthly.csv' id='tableau_monthly.csv_C5AD97D60CBB4FFD9D08D5CE93B8D699'>
+            <properties context=''>
+              <relation connection='textscan.1r4mdsn0ji3wld156lg3t0gvajw3' name='tableau_monthly.csv' table='[tableau_monthly#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='date' name='month' ordinal='0' />
+                  <column datatype='integer' name='transactions' ordinal='1' />
+                  <column datatype='integer' name='credits' ordinal='2' />
+                  <column datatype='integer' name='withdrawals' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='tableau_loans' inline='true' name='federated.09eh5yh1vfgpti1eymz361rmoxep' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tableau_loans' name='textscan.0jfwnop1cudjc71gzc7f915fkkgo'>
+            <connection class='textscan' directory='C:/Users/nimma/OneDrive/Desktop/bank-loan-sql-analysis/data/processed' filename='tableau_loans.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0jfwnop1cudjc71gzc7f915fkkgo' name='tableau_loans.csv' table='[tableau_loans#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='loan_id' ordinal='0' />
+            <column datatype='date' name='loan_date' ordinal='1' />
+            <column datatype='integer' name='loan_year' ordinal='2' />
+            <column datatype='real' name='amount' ordinal='3' />
+            <column datatype='integer' name='duration_months' ordinal='4' />
+            <column datatype='real' name='monthly_payment' ordinal='5' />
+            <column datatype='string' name='status' ordinal='6' />
+            <column datatype='string' name='status_desc' ordinal='7' />
+            <column datatype='integer' name='is_default' ordinal='8' />
+            <column datatype='string' name='gender' ordinal='9' />
+            <column datatype='integer' name='age_at_loan' ordinal='10' />
+            <column datatype='string' name='region' ordinal='11' />
+            <column datatype='string' name='district_name' ordinal='12' />
+            <column datatype='real' name='avg_balance_before' ordinal='13' />
+            <column datatype='real' name='payment_to_balance_pct' ordinal='14' />
+            <column datatype='string' name='amount_band' ordinal='15' />
+            <column datatype='string' name='age_band' ordinal='16' />
+            <column datatype='string' name='risk_tier' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loan_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loan_id]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>loan_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loan_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[loan_date]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>loan_date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loan_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loan_year]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>loan_year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[amount]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>amount</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration_months]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>duration_months</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monthly_payment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[monthly_payment]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>monthly_payment</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status_desc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status_desc]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>status_desc</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_default</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_default]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>is_default</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age_at_loan</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age_at_loan]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>age_at_loan</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>district_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[district_name]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>district_name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_balance_before</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_balance_before]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>avg_balance_before</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_to_balance_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[payment_to_balance_pct]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>payment_to_balance_pct</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amount_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amount_band]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>amount_band</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age_band]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>age_band</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>risk_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[risk_tier]</local-name>
+            <parent-name>[tableau_loans.csv]</parent-name>
+            <remote-alias>risk_tier</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Loans' datatype='integer' name='[Calculation_1420041324617433088]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([loan_id])' />
+      </column>
+      <column caption='Total Lent' datatype='real' default-format='n#,##0,,.0M;-#,##0,,.0M' name='[Calculation_1420041324617617409]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([amount])' />
+      </column>
+      <column caption='Default Rate' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617723906]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([is_default]) / COUNTD([loan_id])' />
+      </column>
+      <column caption='Amount At Risk %' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617805827]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [is_default] = 1 THEN [amount] END) / SUM([amount])' />
+      </column>
+      <column caption='Above Portfolio Average' datatype='string' name='[Calculation_690176710131879936]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1420041324617723906] &gt; MIN({FIXED : SUM([is_default]) / COUNTD([loan_id])})&#13;&#10;THEN &quot;Above average&quot; ELSE &quot;At or below average&quot; END' />
+      </column>
+      <column caption='tableau_loans.csv' datatype='table' name='[__tableau_internal_object_id__].[tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600]' role='measure' type='quantitative' />
+      <column caption='Age At Loan' datatype='integer' name='[age_at_loan]' role='measure' type='quantitative' />
+      <column caption='Age Band' datatype='string' name='[age_band]' role='dimension' type='nominal' />
+      <column caption='Amount' datatype='real' name='[amount]' role='measure' type='quantitative' />
+      <column caption='Amount Band' datatype='string' name='[amount_band]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;1. Under 50K&quot;' value='Under 50K' />
+          <alias key='&quot;2. 50K-150K&quot;' value='50K-150K' />
+          <alias key='&quot;3. 150K-300K&quot;' value='150K-300K' />
+          <alias key='&quot;4. 300K+&quot;' value='300K+' />
+        </aliases>
+      </column>
+      <column caption='Avg Balance Before' datatype='real' name='[avg_balance_before]' role='measure' type='quantitative' />
+      <column caption='District Name' datatype='string' name='[district_name]' role='dimension' type='nominal' />
+      <column caption='Duration Months' datatype='integer' name='[duration_months]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Is Default' datatype='integer' name='[is_default]' role='measure' type='quantitative' />
+      <column caption='Loan Date' datatype='date' name='[loan_date]' role='dimension' type='ordinal' />
+      <column caption='Loan Id' datatype='integer' name='[loan_id]' role='dimension' type='ordinal' />
+      <column caption='Loan Year' datatype='integer' name='[loan_year]' role='dimension' type='quantitative' />
+      <column caption='Monthly Payment' datatype='real' name='[monthly_payment]' role='measure' type='quantitative' />
+      <column caption='Payment To Balance Pct' datatype='real' name='[payment_to_balance_pct]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+          <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+          <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+          <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+          <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+          <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+          <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+        </aliases>
+      </column>
+      <column caption='Risk Tier' datatype='string' name='[risk_tier]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;1. High risk&quot;' value='High risk' />
+          <alias key='&quot;2. Medium risk&quot;' value='Medium risk' />
+          <alias key='&quot;3. Low risk&quot;' value='Low risk' />
+        </aliases>
+      </column>
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Status Desc' datatype='string' name='[status_desc]' role='dimension' type='nominal' />
+      <column-instance column='[risk_tier]' derivation='None' name='[none:risk_tier:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_690176710131879936]' derivation='User' name='[usr:Calculation_690176710131879936:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/nimma/AppData/Local/Temp/TableauTemp/#TableauTemp_0s4id141uk68n913yw9650bipx6n.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/15/2026 06:35:43 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>loan_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[loan_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>loan_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>682</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>loan_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[loan_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>loan_date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>559</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>loan_year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[loan_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>loan_year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>amount</remote-alias>
+              <ordinal>3</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>645</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>duration_months</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[duration_months]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>duration_months</remote-alias>
+              <ordinal>4</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>monthly_payment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[monthly_payment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>monthly_payment</remote-alias>
+              <ordinal>5</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>577</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status</remote-alias>
+              <ordinal>6</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status_desc</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status_desc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status_desc</remote-alias>
+              <ordinal>7</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_default</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_default]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_default</remote-alias>
+              <ordinal>8</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>9</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age_at_loan</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age_at_loan]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age_at_loan</remote-alias>
+              <ordinal>10</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>11</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>district_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[district_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>district_name</remote-alias>
+              <ordinal>12</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_balance_before</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_balance_before]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_balance_before</remote-alias>
+              <ordinal>13</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>682</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payment_to_balance_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[payment_to_balance_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payment_to_balance_pct</remote-alias>
+              <ordinal>14</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>amount_band</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[amount_band]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>amount_band</remote-alias>
+              <ordinal>15</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age_band</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[age_band]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age_band</remote-alias>
+              <ordinal>16</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>risk_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[risk_tier]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>risk_tier</remote-alias>
+              <ordinal>17</ordinal>
+              <family>tableau_loans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_690176710131879936:nk]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;At or below average&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Above average&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:risk_tier:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;3. Low risk&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;1. High risk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2. Medium risk&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='tableau_loans.csv' id='tableau_loans.csv_24978C3B0DA840058222AFDE43C4A600'>
+            <properties context=''>
+              <relation connection='textscan.0jfwnop1cudjc71gzc7f915fkkgo' name='tableau_loans.csv' table='[tableau_loans#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='loan_id' ordinal='0' />
+                  <column datatype='date' name='loan_date' ordinal='1' />
+                  <column datatype='integer' name='loan_year' ordinal='2' />
+                  <column datatype='real' name='amount' ordinal='3' />
+                  <column datatype='integer' name='duration_months' ordinal='4' />
+                  <column datatype='real' name='monthly_payment' ordinal='5' />
+                  <column datatype='string' name='status' ordinal='6' />
+                  <column datatype='string' name='status_desc' ordinal='7' />
+                  <column datatype='integer' name='is_default' ordinal='8' />
+                  <column datatype='string' name='gender' ordinal='9' />
+                  <column datatype='integer' name='age_at_loan' ordinal='10' />
+                  <column datatype='string' name='region' ordinal='11' />
+                  <column datatype='string' name='district_name' ordinal='12' />
+                  <column datatype='real' name='avg_balance_before' ordinal='13' />
+                  <column datatype='real' name='payment_to_balance_pct' ordinal='14' />
+                  <column datatype='string' name='amount_band' ordinal='15' />
+                  <column datatype='string' name='age_band' ordinal='16' />
+                  <column datatype='string' name='risk_tier' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='tableau_accounts.csv (Multiple Connections)' inline='true' name='federated.1lpeoz41ekkkn616g9wjl0nco6r4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tableau_accounts' name='textscan.1umny7m16sxeqj140q5dz1oic4sv'>
+            <connection class='textscan' directory='C:/Users/nimma/OneDrive/Desktop/bank-loan-sql-analysis/data/processed' filename='tableau_accounts.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='tableau_monthly' name='textscan.1midrj41f41iby16anl6f0ow8jpb'>
+            <connection class='textscan' directory='C:/Users/nimma/OneDrive/Desktop/bank-loan-sql-analysis/data/processed' filename='tableau_monthly.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='tableau_loans' name='textscan.04j7t3u0tbhxz714tjqv01q5xn2e'>
+            <connection class='textscan' directory='C:/Users/nimma/OneDrive/Desktop/bank-loan-sql-analysis/data/processed' filename='tableau_loans.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1umny7m16sxeqj140q5dz1oic4sv' name='tableau_accounts.csv' table='[tableau_accounts#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='account_id' ordinal='0' />
+            <column datatype='integer' name='district_id' ordinal='1' />
+            <column datatype='string' name='district_name' ordinal='2' />
+            <column datatype='string' name='region' ordinal='3' />
+            <column datatype='integer' name='avg_salary' ordinal='4' />
+            <column datatype='string' name='statement_frequency' ordinal='5' />
+            <column datatype='date' name='open_date' ordinal='6' />
+            <column datatype='real' name='current_balance' ordinal='7' />
+            <column datatype='date' name='last_trans_date' ordinal='8' />
+            <column datatype='integer' name='n_transactions' ordinal='9' />
+            <column datatype='real' name='total_credits' ordinal='10' />
+            <column datatype='real' name='total_withdrawals' ordinal='11' />
+            <column datatype='real' name='avg_balance' ordinal='12' />
+            <column datatype='string' name='card_type' ordinal='13' />
+            <column datatype='integer' name='has_loan' ordinal='14' />
+            <column datatype='integer' name='loan_default' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>account_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[account_id]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>account_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>district_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[district_id]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>district_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>district_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[district_name]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>district_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg_salary]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>avg_salary</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>statement_frequency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[statement_frequency]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>statement_frequency</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>open_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[open_date]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>open_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>current_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[current_balance]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>current_balance</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_trans_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[last_trans_date]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>last_trans_date</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>n_transactions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[n_transactions]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>n_transactions</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_credits</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_credits]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>total_credits</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_withdrawals</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_withdrawals]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>total_withdrawals</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_balance]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>avg_balance</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>card_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[card_type]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>card_type</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>has_loan</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[has_loan]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>has_loan</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loan_default</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loan_default]</local-name>
+            <parent-name>[tableau_accounts.csv]</parent-name>
+            <remote-alias>loan_default</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='tableau_accounts.csv' datatype='table' name='[__tableau_internal_object_id__].[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]' role='measure' type='quantitative' />
+      <column caption='Account Id' datatype='integer' name='[account_id]' role='dimension' type='ordinal' />
+      <column caption='Avg Balance' datatype='real' name='[avg_balance]' role='measure' type='quantitative' />
+      <column caption='Avg Salary' datatype='integer' name='[avg_salary]' role='measure' type='quantitative' />
+      <column caption='Card Type' datatype='string' name='[card_type]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;classic&quot;' value='Classic' />
+          <alias key='&quot;gold&quot;' value='Gold' />
+          <alias key='&quot;junior&quot;' value='Junior' />
+          <alias key='&quot;none&quot;' value='None' />
+        </aliases>
+      </column>
+      <column caption='Current Balance' datatype='real' name='[current_balance]' role='measure' type='quantitative' />
+      <column caption='District Id' datatype='integer' name='[district_id]' role='dimension' type='ordinal' />
+      <column caption='District Name' datatype='string' name='[district_name]' role='dimension' type='nominal' />
+      <column caption='Has Loan' datatype='integer' name='[has_loan]' role='measure' type='quantitative' />
+      <column caption='Last Trans Date' datatype='date' name='[last_trans_date]' role='dimension' type='ordinal' />
+      <column caption='Loan Default' datatype='integer' name='[loan_default]' role='measure' type='quantitative' />
+      <column caption='N Transactions' datatype='integer' name='[n_transactions]' role='measure' type='quantitative' />
+      <column caption='Open Date' datatype='date' name='[open_date]' role='dimension' type='ordinal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Statement Frequency' datatype='string' name='[statement_frequency]' role='dimension' type='nominal' />
+      <column caption='Total Credits' datatype='real' name='[total_credits]' role='measure' type='quantitative' />
+      <column caption='Total Withdrawals' datatype='real' name='[total_withdrawals]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/nimma/AppData/Local/Temp/TableauTemp/#TableauTemp_1llwehi1nbsx5s12362tm0l5z8x0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/15/2026 06:35:18 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>account_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[account_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>account_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>district_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[district_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>district_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>district_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[district_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>district_name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>3</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[avg_salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_salary</remote-alias>
+              <ordinal>4</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>statement_frequency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[statement_frequency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>statement_frequency</remote-alias>
+              <ordinal>5</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>open_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[open_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>open_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1367</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>current_balance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[current_balance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>current_balance</remote-alias>
+              <ordinal>7</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4082</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_trans_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[last_trans_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>last_trans_date</remote-alias>
+              <ordinal>8</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>73</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>n_transactions</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[n_transactions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>n_transactions</remote-alias>
+              <ordinal>9</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>565</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_credits</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_credits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_credits</remote-alias>
+              <ordinal>10</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_withdrawals</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_withdrawals]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_withdrawals</remote-alias>
+              <ordinal>11</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_balance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_balance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_balance</remote-alias>
+              <ordinal>12</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>card_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[card_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>card_type</remote-alias>
+              <ordinal>13</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>has_loan</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[has_loan]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>has_loan</remote-alias>
+              <ordinal>14</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>loan_default</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[loan_default]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>loan_default</remote-alias>
+              <ordinal>15</ordinal>
+              <family>tableau_accounts.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='tableau_accounts.csv' id='tableau_accounts.csv_70A150F50A164D579213BC7F81881F77'>
+            <properties context=''>
+              <relation connection='textscan.1umny7m16sxeqj140q5dz1oic4sv' name='tableau_accounts.csv' table='[tableau_accounts#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='account_id' ordinal='0' />
+                  <column datatype='integer' name='district_id' ordinal='1' />
+                  <column datatype='string' name='district_name' ordinal='2' />
+                  <column datatype='string' name='region' ordinal='3' />
+                  <column datatype='integer' name='avg_salary' ordinal='4' />
+                  <column datatype='string' name='statement_frequency' ordinal='5' />
+                  <column datatype='date' name='open_date' ordinal='6' />
+                  <column datatype='real' name='current_balance' ordinal='7' />
+                  <column datatype='date' name='last_trans_date' ordinal='8' />
+                  <column datatype='integer' name='n_transactions' ordinal='9' />
+                  <column datatype='real' name='total_credits' ordinal='10' />
+                  <column datatype='real' name='total_withdrawals' ordinal='11' />
+                  <column datatype='real' name='avg_balance' ordinal='12' />
+                  <column datatype='string' name='card_type' ordinal='13' />
+                  <column datatype='integer' name='has_loan' ordinal='14' />
+                  <column datatype='integer' name='loan_default' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+      <datasources>
+        <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+      </datasources>
+      <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+        <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+        <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+          <aliases>
+            <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+            <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+            <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+            <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+            <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+            <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+            <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]'>
+        <groupfilter function='level-members' level='[none:region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_D3B0D2A617DC47889667AE4D7BBF5300]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Regions' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='AGG(Above Portfolio Average)' />
+        <param name='target' value='Regions' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Amount Bands'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Default rate rises with loan size</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Total Loans' datatype='integer' name='[Calculation_1420041324617433088]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([loan_id])' />
+            </column>
+            <column caption='Default Rate' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617723906]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([is_default]) / COUNTD([loan_id])' />
+            </column>
+            <column caption='Amount Band' datatype='string' name='[amount_band]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;1. Under 50K&quot;' value='Under 50K' />
+                <alias key='&quot;2. 50K-150K&quot;' value='50K-150K' />
+                <alias key='&quot;3. 150K-300K&quot;' value='150K-300K' />
+                <alias key='&quot;4. 300K+&quot;' value='300K+' />
+              </aliases>
+            </column>
+            <column caption='Is Default' datatype='integer' name='[is_default]' role='measure' type='quantitative' />
+            <column caption='Loan Id' datatype='integer' name='[loan_id]' role='dimension' type='ordinal' />
+            <column-instance column='[amount_band]' derivation='None' name='[none:amount_band:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617433088]' derivation='User' name='[usr:Calculation_1420041324617433088:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1420041324617723906]' derivation='User' name='[usr:Calculation_1420041324617723906:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:amount_band:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;1. Under 50K&quot;</bucket>
+              <bucket>&quot;2. 50K-150K&quot;</bucket>
+              <bucket>&quot;3. 150K-300K&quot;</bucket>
+              <bucket>&quot;4. 300K+&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617433088:qk]' />
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]</rows>
+        <cols>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:amount_band:nk]</cols>
+      </table>
+      <simple-id uuid='{5AD6EBF4-D4AF-460D-B2E2-518F6AC661A6}' />
+    </worksheet>
+    <worksheet name='Card Value'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Card holders keep higher balances</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_accounts.csv (Multiple Connections)' name='federated.1lpeoz41ekkkn616g9wjl0nco6r4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lpeoz41ekkkn616g9wjl0nco6r4'>
+            <column-instance column='[__tableau_internal_object_id__].[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tableau_accounts.csv_70A150F50A164D579213BC7F81881F77:qk]' pivot='key' type='quantitative' />
+            <column caption='tableau_accounts.csv' datatype='table' name='[__tableau_internal_object_id__].[tableau_accounts.csv_70A150F50A164D579213BC7F81881F77]' role='measure' type='quantitative' />
+            <column-instance column='[avg_balance]' derivation='Avg' name='[avg:avg_balance:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Balance' datatype='real' name='[avg_balance]' role='measure' type='quantitative' />
+            <column caption='Card Type' datatype='string' name='[card_type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;classic&quot;' value='Classic' />
+                <alias key='&quot;gold&quot;' value='Gold' />
+                <alias key='&quot;junior&quot;' value='Junior' />
+                <alias key='&quot;none&quot;' value='None' />
+              </aliases>
+            </column>
+            <column-instance column='[card_type]' derivation='None' name='[none:card_type:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[none:card_type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;gold&quot;</bucket>
+              <bucket>&quot;classic&quot;</bucket>
+              <bucket>&quot;junior&quot;</bucket>
+              <bucket>&quot;none&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[avg:avg_balance:qk]' value='n#,##0,.0K;-#,##0,.0K' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[__tableau_internal_object_id__].[cnt:tableau_accounts.csv_70A150F50A164D579213BC7F81881F77:qk]' />
+              <text column='[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[avg:avg_balance:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[avg:avg_balance:qk]</rows>
+        <cols>[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[none:card_type:nk]</cols>
+      </table>
+      <simple-id uuid='{023D892D-D505-4E08-B3A7-E2AA8A78767E}' />
+    </worksheet>
+    <worksheet name='KPI At Risk'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='10'>Money in Bad Loans</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Amount At Risk %' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617805827]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [is_default] = 1 THEN [amount] END) / SUM([amount])' />
+            </column>
+            <column caption='Amount' datatype='real' name='[amount]' role='measure' type='quantitative' />
+            <column caption='Is Default' datatype='integer' name='[is_default]' role='measure' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617805827]' derivation='User' name='[usr:Calculation_1420041324617805827:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617805827:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='28'>&lt;</run>
+                <run bold='true' fontsize='28'>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617805827:qk]</run>
+                <run bold='true' fontsize='28'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{08E4AB6F-1DBA-4743-BF58-1CC77AEFC49D}' />
+    </worksheet>
+    <worksheet name='KPI Default'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='10'>Default Rate</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Default Rate' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617723906]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([is_default]) / COUNTD([loan_id])' />
+            </column>
+            <column caption='Is Default' datatype='integer' name='[is_default]' role='measure' type='quantitative' />
+            <column caption='Loan Id' datatype='integer' name='[loan_id]' role='dimension' type='ordinal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617723906]' derivation='User' name='[usr:Calculation_1420041324617723906:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='28'>&lt;</run>
+                <run bold='true' fontsize='28'>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]</run>
+                <run bold='true' fontsize='28'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{82971E61-4FD9-4978-9F7D-D3B38F6882E9}' />
+    </worksheet>
+    <worksheet name='KPI Lent'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='10'>Total Amount Lent</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Total Lent' datatype='real' default-format='n#,##0,,.0M;-#,##0,,.0M' name='[Calculation_1420041324617617409]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([amount])' />
+            </column>
+            <column caption='Amount' datatype='real' name='[amount]' role='measure' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617617409]' derivation='User' name='[usr:Calculation_1420041324617617409:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617617409:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='28'>&lt;</run>
+                <run bold='true' fontsize='28'>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617617409:qk]</run>
+                <run bold='true' fontsize='28'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{90C3DF2E-772A-450C-A15C-92268800D825}' />
+    </worksheet>
+    <worksheet name='KPI Loans'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='10'>Total Loans</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Total Loans' datatype='integer' name='[Calculation_1420041324617433088]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([loan_id])' />
+            </column>
+            <column caption='Loan Id' datatype='integer' name='[loan_id]' role='dimension' type='ordinal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617433088]' derivation='User' name='[usr:Calculation_1420041324617433088:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617433088:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='28'>&lt;</run>
+                <run bold='true' fontsize='28'>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617433088:qk]</run>
+                <run bold='true' fontsize='28'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FC2CE492-FAEF-43CF-8636-48165CDEE3EC}' />
+    </worksheet>
+    <worksheet name='Monthly Trend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Monthly transactions grew steadily, 1993–1998</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_monthly' name='federated.06rck8n06ae7sd166b9cx1bqutud' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06rck8n06ae7sd166b9cx1bqutud'>
+            <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+            <column-instance column='[transactions]' derivation='Sum' name='[sum:transactions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[month]' derivation='Month-Trunc' name='[tmn:month:qk]' pivot='key' type='quantitative' />
+            <column caption='Transactions' datatype='integer' name='[transactions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.06rck8n06ae7sd166b9cx1bqutud].[sum:transactions:qk]</rows>
+        <cols>[federated.06rck8n06ae7sd166b9cx1bqutud].[tmn:month:qk]</cols>
+      </table>
+      <simple-id uuid='{B3438499-422D-4D57-8270-3D775981388D}' />
+    </worksheet>
+    <worksheet name='Regions'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Default rate by region</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Total Loans' datatype='integer' name='[Calculation_1420041324617433088]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([loan_id])' />
+            </column>
+            <column caption='Default Rate' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617723906]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([is_default]) / COUNTD([loan_id])' />
+            </column>
+            <column caption='Above Portfolio Average' datatype='string' name='[Calculation_690176710131879936]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1420041324617723906] &gt; MIN({FIXED : SUM([is_default]) / COUNTD([loan_id])})&#13;&#10;THEN &quot;Above average&quot; ELSE &quot;At or below average&quot; END' />
+            </column>
+            <column caption='Is Default' datatype='integer' name='[is_default]' role='measure' type='quantitative' />
+            <column caption='Loan Id' datatype='integer' name='[loan_id]' role='dimension' type='ordinal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617433088]' derivation='User' name='[usr:Calculation_1420041324617433088:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1420041324617723906]' derivation='User' name='[usr:Calculation_1420041324617723906:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_690176710131879936]' derivation='User' name='[usr:Calculation_690176710131879936:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_690176710131879936:nk]' />
+              <tooltip column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617433088:qk]' />
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</rows>
+        <cols>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]</cols>
+      </table>
+      <simple-id uuid='{B90ED880-6635-47F6-9DF8-5AA0CBB7256D}' />
+    </worksheet>
+    <worksheet name='Risk Tiers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Default rate by risk tier</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+            <column caption='Total Loans' datatype='integer' name='[Calculation_1420041324617433088]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([loan_id])' />
+            </column>
+            <column caption='Default Rate' datatype='real' default-format='p0.0%' name='[Calculation_1420041324617723906]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([is_default]) / COUNTD([loan_id])' />
+            </column>
+            <column caption='Is Default' datatype='integer' name='[is_default]' role='measure' type='quantitative' />
+            <column caption='Loan Id' datatype='integer' name='[loan_id]' role='dimension' type='ordinal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[risk_tier]' derivation='None' name='[none:risk_tier:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+                <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+                <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+                <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+                <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+                <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+                <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+              </aliases>
+            </column>
+            <column caption='Risk Tier' datatype='string' name='[risk_tier]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;1. High risk&quot;' value='High risk' />
+                <alias key='&quot;2. Medium risk&quot;' value='Medium risk' />
+                <alias key='&quot;3. Low risk&quot;' value='Low risk' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1420041324617433088]' derivation='User' name='[usr:Calculation_1420041324617433088:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1420041324617723906]' derivation='User' name='[usr:Calculation_1420041324617723906:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:risk_tier:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;1. High risk&quot;</bucket>
+              <bucket>&quot;2. Medium risk&quot;</bucket>
+              <bucket>&quot;3. Low risk&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:risk_tier:nk]' />
+              <tooltip column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617433088:qk]' />
+              <text column='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_1420041324617723906:qk]</rows>
+        <cols>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:risk_tier:nk]</cols>
+      </table>
+      <simple-id uuid='{D5AB3301-25C2-4141-8D05-6A6EC28558EB}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Bank Loan Risk Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>Czech Bank: Loan Risk &amp; Customer Analytics (1993–1998)</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='11'>682 loans · 4,500 accounts · 1M+ transactions | Built with MySQL + Tableau</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1000' maxwidth='1200' minheight='1000' minwidth='1200' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='tableau_loans' name='federated.09eh5yh1vfgpti1eymz361rmoxep' />
+      </datasources>
+      <datasource-dependencies datasource='federated.09eh5yh1vfgpti1eymz361rmoxep'>
+        <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+        <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal'>
+          <aliases>
+            <alias key='&quot;central Bohemia&quot;' value='Central Bohemia' />
+            <alias key='&quot;east Bohemia&quot;' value='East Bohemia' />
+            <alias key='&quot;north Bohemia&quot;' value='North Bohemia' />
+            <alias key='&quot;north Moravia&quot;' value='North Moravia' />
+            <alias key='&quot;south Bohemia&quot;' value='South Bohemia' />
+            <alias key='&quot;south Moravia&quot;' value='South Moravia' />
+            <alias key='&quot;west Bohemia&quot;' value='West Bohemia' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98400' id='24' param='horz' type-v2='layout-flow' w='98666' x='667' y='800'>
+            <zone h='98400' id='10' param='horz' type-v2='layout-flow' w='98666' x='667' y='800'>
+              <zone h='98400' id='5' param='vert' type-v2='layout-flow' w='98666' x='667' y='800'>
+                <zone fixed-size='62' h='7000' id='7' is-fixed='true' type-v2='title' w='98666' x='667' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='13600' id='17' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98666' x='667' y='7800'>
+                  <zone h='13600' id='18' name='KPI Loans' w='19750' x='667' y='7800'>
+                    <layout-cache fixed-size-h='104' fixed-size-w='100' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13600' id='19' name='KPI Lent' w='19750' x='20417' y='7800'>
+                    <layout-cache fixed-size-h='104' fixed-size-w='180' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13600' id='20' name='KPI Default' w='19750' x='40167' y='7800'>
+                    <layout-cache fixed-size-h='104' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13600' id='21' name='KPI At Risk' w='19750' x='59917' y='7800'>
+                    <layout-cache fixed-size-h='128' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13600' id='25' mode='checkdropdown' name='Regions' param='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]' type-v2='filter' values='database' w='19666' x='79667' y='7800'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='77800' id='6' type-v2='layout-basic' w='98666' x='667' y='21400'>
+                  <zone h='32478' id='8' name='Risk Tiers' w='49332' x='667' y='21400'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='38900' id='12' name='Amount Bands' w='49334' x='49999' y='21400'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='25850' id='13' name='Regions' w='49332' x='667' y='53878'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='34247' id='15' name='Card Value' w='49334' x='49999' y='60300'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='19472' id='16' name='Monthly Trend' w='49332' x='667' y='79728'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone forceUpdate='true' h='4653' id='22' type-v2='text' w='49334' x='49999' y='94547'>
+                    <formatted-text>
+                      <run bold='true' fontalignment='2' fontcolor='#000000' fontname='Benton Sans Book'>Analysis by Srijai Nimmagadda · Data: Berka / PKDD&apos;99 Czech bank dataset (Kaggle)</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>Czech Bank: Loan Risk &amp; Customer Analytics (1993–1998)</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='11'>682 loans · 4,500 accounts · 1M+ transactions | Built with MySQL + Tableau</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='32' param='vert' type-v2='layout-flow' w='98666' x='667' y='800'>
+                <zone fixed-size='62' h='7000' id='7' type-v2='title' w='98666' x='667' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='128' h='13600' id='18' is-fixed='true' name='KPI Loans' w='19750' x='667' y='7800'>
+                  <layout-cache fixed-size-h='104' fixed-size-w='100' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='128' h='13600' id='19' is-fixed='true' name='KPI Lent' w='19750' x='20417' y='7800'>
+                  <layout-cache fixed-size-h='104' fixed-size-w='180' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='128' h='13600' id='20' is-fixed='true' name='KPI Default' w='19750' x='40167' y='7800'>
+                  <layout-cache fixed-size-h='104' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='128' h='13600' id='21' is-fixed='true' name='KPI At Risk' w='19750' x='59917' y='7800'>
+                  <layout-cache fixed-size-h='128' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32478' id='8' is-fixed='true' name='Risk Tiers' w='49332' x='667' y='21400'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38900' id='12' is-fixed='true' name='Amount Bands' w='49334' x='49999' y='21400'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13600' id='25' mode='checkdropdown' name='Regions' param='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]' type-v2='filter' values='database' w='19666' x='79667' y='7800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='250' h='25850' id='13' is-fixed='true' name='Regions' w='49332' x='667' y='53878'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='34247' id='15' is-fixed='true' name='Card Value' w='49334' x='49999' y='60300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='187' h='19472' id='16' is-fixed='true' name='Monthly Trend' w='49332' x='667' y='79728'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4653' id='22' type-v2='text' w='49334' x='49999' y='94547'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='2' fontcolor='#000000' fontname='Benton Sans Book'>Analysis by Srijai Nimmagadda · Data: Berka / PKDD&apos;99 Czech bank dataset (Kaggle)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{3C098E3F-D62B-4FFF-AD61-52A8AB2DB917}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='89'>
+    <window class='dashboard' maximized='true' name='Bank Loan Risk Dashboard'>
+      <viewpoints>
+        <viewpoint name='Amount Bands'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Card Value'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI At Risk' />
+        <viewpoint name='KPI Default' />
+        <viewpoint name='KPI Lent' />
+        <viewpoint name='KPI Loans' />
+        <viewpoint name='Monthly Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Regions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Risk Tiers'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{90DE388F-5FB5-4329-87B3-CC6EE32F33FF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Amount Bands'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:amount_band:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{83FF1F72-32E8-4F17-BCFD-44B4C6A9B098}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Card Value'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lpeoz41ekkkn616g9wjl0nco6r4].[none:card_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{153D0F0A-DE44-4762-B4DF-C7F1ACB57A1D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='KPI At Risk'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{68A7C5D5-322D-4F22-93DC-F3E90B8D36F6}' />
+    </window>
+    <window class='worksheet' hidden='true' name='KPI Default'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C1E4B857-CAC2-48F1-A67F-E0F0D62E5D6D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='KPI Lent'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7DE5E1A5-9119-4B5E-A997-D0C6A6F6ACCF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='KPI Loans'>
+      <cards>
+        <edge name='left'>
+          <strip size='193'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F1A25848-1A93-41AA-8DA1-B459569AB0D1}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Monthly Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{AF894958-FD38-41F1-AF2E-9D4246CD797B}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Regions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.09eh5yh1vfgpti1eymz361rmoxep].[usr:Calculation_690176710131879936:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3E9525DC-DD3F-4893-A70C-50AE1CD09A2A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Risk Tiers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:risk_tier:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.09eh5yh1vfgpti1eymz361rmoxep].[none:risk_tier:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{66278DF1-CB17-4AEF-BF8E-B59616CEB303}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Bank Loan Risk Dashboard' width='192'>
+      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
+      /umRdB/gGOL4+U8JDR7Mpk2buPjii1mzZg2TJk3CbrezevVqJKlneFun06HVahk9evQRt/uT
+      CtDsu2XQ4EJAMGZYPu0NXkrL6vHFFNx7w7X858VnmP/92yk0xHjun+/03n/muRfxjfNG8dwz
+      z9G8J8WPfvQjOstWsnRDz3vx39Wl3P7DO4i1bOedcnh/yVImn3Euq1d/QvF5o5h09lymj8pk
+      y0dvo7YWUJj76UTs8oVPUVxy1uELQKVSEU/JNNTXoZSTuFIGpo3JobbaRSzp7TlYIeJFkT2a
+      eDSKlJJQCZnqajcqrQqSETy+IFqlRDiSIiPTTMzjw5STgUboSBiySDibQZ/B2JFDj+iLTvPl
+      yMnJwWKxEIvF0Gg0eDw9TVCtVotarSaZTNLV1YVGoyEzM5O8vLwjSn/SIBvrKls4Z2whT/7t
+      b0wqyUYuvpCzMpWsbAWjuWeVgNWio6vbjyMrQiT16f09tWLPxg2NSBFJynR2ubDnjcUD6EQS
+      f0wi4vUAWRSNmsgN3/42X/taM66KNZhMRhCC6276EVoCvPjiG9z1g+8AMH7WVXh3rzgyAYTd
+      PqyZJlIpgUEp09jchlJnQyN5UGuNDHLoaEkKVEolQqVEliVQyCgUaszWLBQKQcjvRqXTo9Xp
+      sWY5MBVk4mn1IEe8hCUtlpN3Vv2ko7Ozk5qaGgoLC9Hr9bjdbsxmM4FAAFmWufDCC6mqqqK1
+      tRWPx3PEAphz9Y188PbrvLQlwZkXX81IByxe/gmJbCtjhzoQOT1t9nOu+hYL31xIhz2Ps6aN
+      BcBgL2aMrqcPOHXaNMYMH8z7b7+FwZrDVePzyYhPYXzJEBYufI28HDv/v70z643jyu74r7au
+      ql6q2QubFEktlCVZjkay7JEjeDBOXmJgAht58bcJ8kmCwG8BAiN5mTcDCcYeBwI8NhxZgj2W
+      RFJskr1v1WvtVXkg1aZEieqWSbst8f/S3dWnbp+6fU/Vvff8zzl/s5qn8Nrv+eQ//4vls5d4
+      7cI1MHaH95f/+99YbsAH//QBALlzb/C75FnSr6uT+wF2935BFHedN6Io7L2KY+La0x6RB7+L
+      xuc9VVYUEQCnVkP0/AMyT8MsObamlQ+j3dQXky5sj0oXKZdF3FdG6lGw+f6g80evh/2/L7kf
+      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
+      SUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
